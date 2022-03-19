@@ -1,17 +1,18 @@
 var questionEl = document.getElementById("question");
-var answerEl = document.getElementById("answers");
-var responses = document.getElementById("buttons");
+var answerBtnsEl = document.getElementById("btn-list");
+var answerButtonn1 = document.querySelector("button[name='answer1']");
+var answerButtonn2 = document.querySelector("button[name='answer2']");
+var answerButtonn3 = document.querySelector("button[name='answer3']");
+var answerButtonn4 = document.querySelector("button[name='answer4']");
 var startBtnEl = document.getElementById("start-btn");
-var nextBtnEl = document.getElementById("nect-btn");
+var nextBtnEl = document.getElementById("next-btn");
+var timerEl = document.getElementById("timer-count");
+var h2El = document.getElementById("question");
+var questionCount = 0;
+
+var count = 74;
 
 // * questions array
-questionArray = ["Commonly used data types DO NOT Include: ______", "The condition in an If / Else statment is enclosed with ______",
- "Arrays in Javascript can be used to store _____.",
-  "String values must be enclosed within ______ when being assigned to variables.", 
-  "A very usefull tool used during developement and debugging for printing content to the debugger is: ______."];
-
-
-
 const questionList = [
   {
     question: "Commonly used data types DO NOT Include: ______",
@@ -20,7 +21,7 @@ const questionList = [
   },
   {
     question: "The condition in an If / Else statment is enclosed with ______",
-    answers: ["Quotes", "Braces", "Parenthesis", "square brackets"],
+    answers: ["Quotes", "Braces", "Parenthesis", "Square Brackets"],
     correctAnswer: "Parenthesis",
   },
   {
@@ -42,26 +43,40 @@ const questionList = [
 
 function startQuiz() {
   startBtnEl.classList.add("hide");
-  responses.classList.remove("hide");
+  answerBtnsEl.classList.remove("hide");
+  startTimer();
+  loadQuestion();
+}
 
+function createButtons() {
   for (i = 0; i < 4; i++) {
-    button = document.createElement("button");
-    button.innerHTML = questionList[0].answers[i];
-    button.classList.add("button");
-    responses.appendChild(button);
+    button = document.createElement("button")
+    buttonListEl.appendChild(button);
   }
-
-  changeQuestion();
-  button[0].addEventListener()
 }
 
-function changeQuestion() {
-  questionEl.innerText = questionArray[0];
-  answerEl.innetHTML = questionPool[0].answers[0];
+function loadQuestion() {
+  questionEl.innerText = questionList[0].question;
+  answerButtonn1.innerText = (questionList[0].answers[0]);
+  answerButtonn2.innerText = questionList[0].answers[1];
+  answerButtonn3.innerText = questionList[0].answers[2];
+  answerButtonn4.innerText = questionList[0].answers[3];
 }
 
+function startTimer() {
+  timerEl.innerHTML = count + 1;
+  var timer = setInterval(function() {
+    timerEl.innerHTML = count;
+    count = count - 1;
+    if (count < 0) {
+      clearInterval(timer);
+    }
+  }, 1000);
+}
 
 startBtnEl.addEventListener("click", startQuiz);
+
+
 
 
 

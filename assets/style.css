@@ -19,7 +19,7 @@
   flex-direction: column;
 }
 
-#buttons button {
+#btn-list button {
   padding: 10px;
   margin: 5px;
 }
@@ -27,7 +27,7 @@
 
 .test-container {
   display: flex;
-  margin: auto;
+  margin: 0 auto;
   width: 600px;
   height: 400px;
   flex-direction: column;

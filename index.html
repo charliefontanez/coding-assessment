@@ -8,13 +8,12 @@
   <title>Document</title>
 </head>
 <body>
-
   <div class="top-container">
     <div class="highscore">
       <a herf="">View High Scores</a>
     </div>    
     <div id="timer">
-      Time: <span> 0</span>
+      Time: <span id="timer-count"> 0</span>
     </div>
   </div>
 
@@ -22,19 +21,22 @@
     <h2 id="question">1. Question Here.</h2>
     <div class="test">
 
-      <div id="buttons" class="btn hide">
-        <!-- <button class="btn">Answer</button>
-        <button class="btn">Answer</button>
-        <button class="btn">Answer</button>
-        <button class="btn">Answer</button> -->
+      <div id="btn-list" class="hide">
+          <button type="button" name="answer1" class="btn">Answer</button>
+          <button type="button" name="answer2" class="btn">Answer</button>
+          <button type="button" name="answer3" class="btn">Answer</button>
+          <button type="button" name="answer4" class="btn">Answer</button>
       </div>
+
 
       <div class="controls">
         <button id="start-btn" class="start-btn btn">Start</button>
-        <button id="next-btn" class=" next-btn btn hide">Next</button>
       </div>
 
     </div>
+
+    
+
   </div>
   
     <div class="result">
