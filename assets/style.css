@@ -22,17 +22,17 @@
 }
 
 .highscores ul {
-  margin: 30px 150px;
+  margin: 30px 180px;
   list-style: none;
+  position: relative;
+  top: -70px;
 }
 
 .highscores ul li {
   padding: 10px;
-  border: solid 1px black;
   background-color: rgba(55, 55, 55, 0.3);
   
 }
-
 
 .top-container {
   display: flex;
@@ -94,6 +94,16 @@ a {
   border-radius: 4px;
   outline: none;
 }
+
+.quiz-menu-btn {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+
 
 .hide {
   display: none;

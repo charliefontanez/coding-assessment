@@ -79,7 +79,7 @@ function checkSelectedAnswer(event) {
 }
 
 function endQuiz() {
-  questionEl.
+  questionEl.textContent = "Your score is " + score;
 }
 
 function loadQuestions() {
