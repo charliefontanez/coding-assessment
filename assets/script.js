@@ -26,6 +26,7 @@ const questionList = [
   }
 ]
 var startBtnEl = document.getElementById("start-btn");
+var viewHighScoresEl = document.querySelector("view-highscore");
 var questionEl = document.getElementById("question");
 var btnListEl = document.querySelector(".btn-list");
 var answerButton1 = document.querySelector("#btn-1");
@@ -78,7 +79,7 @@ function checkSelectedAnswer(event) {
 }
 
 function endQuiz() {
-  
+  questionEl.
 }
 
 function loadQuestions() {
@@ -134,9 +135,12 @@ function startQuiz() {
   startTimer();
 }
 
-
+/* Menu Event Listeners */
 startBtnEl.addEventListener("click", startQuiz);
+viewHighScoresEl.addEventListener("click")
 
+
+/* Quiz Event Listeners */
 answerButton1.addEventListener("click", answerSelect);
 answerButton2.addEventListener("click", answerSelect);
 answerButton3.addEventListener("click", answerSelect);
