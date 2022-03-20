@@ -13,7 +13,7 @@
       <a href="high_score.html">View High Scores</a>
     </div>    
     <div id="timer">
-      Time: <span id="timer-count"> 0</span>
+      Time: <span id="timer-count">0</span>
     </div>
   </div>
 
@@ -34,13 +34,15 @@
     </div>
   </section>
 
-  <div class="highscore-screen hide">
-    <h2>Correct Answers <span>0</span>/5</h2>
-    <form>
-      <label for="savescore">Enter Initials</label>
-      <input type="text" id="savescore" name="savescore">
-      <input type="submit" value="submit">
-    </form>
+  <div class="your-score-screen hide">
+    <div class="score-form">
+      <h2>Your Score <span id="user-score-display">0</span>/5</h2>
+      <form id="score-form">
+        <label for="savescore">Enter Initials</label>
+        <input id="score-form-text" type="text" id="savescore" name="savescore">
+        <input type="submit" value="submit" >
+      </form>
+    </div>
   </div>
 
 
