@@ -12,7 +12,11 @@
   box-sizing: border-box;
 }
 
-.highscores h2 {
+#highscores-page {
+  display: none;
+}
+
+#highscores-page h2 {
   margin: 0 auto;
   text-align: center;
   padding-bottom: 10px;
@@ -21,14 +25,14 @@
   border-bottom: dashed 2px lightblue;
 }
 
-.highscores ul {
+#highscores-page ul {
   margin: 30px 180px;
   list-style: none;
   position: relative;
   top: -70px;
 }
 
-.highscores ul li {
+#highscores-page ul li {
   padding: 10px;
   background-color: rgba(55, 55, 55, 0.3);
   
@@ -68,18 +72,16 @@ a {
   padding: 10px 0px 15px 0px;
 }
 
-.your-score-screen {
+#your-score-screen {
   margin: 0 auto;
   width:fit-content;
   height:fit-content;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 100px;
+  padding-top: 100px;
 }
-
-.score-form {
-  padding-top: 20px;
-}
-
 
 .start-btn {
   margin: 10px;

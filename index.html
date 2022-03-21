@@ -10,7 +10,7 @@
 <body>
   <div class="top-container">
     <div class="view-highscore">
-      <a href="high_score.html">View High Scores</a>
+      View High Scores
     </div>    
     <div id="timer">
       Time: <span id="timer-count">0</span>
@@ -34,17 +34,30 @@
     </div>
   </section>
 
-  <div class="your-score-screen hide">
-    <div class="score-form">
+  <section id="your-score-screen">
       <h2>Your Score <span id="user-score-display">0</span>/5</h2>
       <form id="score-form">
         <label for="savescore">Enter Initials</label>
         <input id="score-form-text" type="text" id="savescore" name="savescore">
-        <input type="submit" value="submit" >
+        <input type="submit" value="submit">
       </form>
-    </div>
-  </div>
+  </section>
 
+  <div id="highscores-page">
+    <h2 style="text-align: center">High Scores</h2>
+    
+    <button onClick="location.href='index.html'" class="btn quiz-menu-btn" style="display:inline">
+      Go Back
+
+    </button>
+    
+    <ul id="score-list">
+      
+
+    </ul>
+
+    
+  </div>
 
 
   
