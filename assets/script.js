@@ -63,8 +63,8 @@ var timerCount = 74;
 /* Initial Quiz Functions */
 function startQuiz() {
   console.log("started");
-  startBtnEl.classList.add("hide");
-  btnListEl.classList.remove("hide");
+  startBtnEl.style.display = "none";
+  btnListEl.style.display = "flex";
   loadQuestion();
   startTimer();
 }
